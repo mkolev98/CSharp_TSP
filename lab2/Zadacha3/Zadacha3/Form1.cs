@@ -72,8 +72,13 @@ namespace Zadacha3
 
         private void btn_calc_Click(object sender, EventArgs e)
         {
+            try
+            {
             double a = Double.Parse(inputBox.Text);
             resultBox.Text = m_unitConvert(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), a).ToString();
+            }catch{
+                MessageBox.Show("Populnete poletata!");
+            }
 
         }
 
