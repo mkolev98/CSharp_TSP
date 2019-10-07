@@ -70,12 +70,7 @@ namespace Zadacha3
             }
        
 
-        private void btn_calc_Click(object sender, EventArgs e)
-        {
-            double a = Double.Parse(inputBox.Text);
-            resultBox.Text = m_unitConvert(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), a).ToString();
-
-        }
+        
 
         private void btn_refresh_Click(object sender, EventArgs e)
         {
@@ -88,6 +83,37 @@ namespace Zadacha3
         private void btn_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double a = Double.Parse(inputBox.Text);
+                resultBox.Text = m_unitConvert(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), a).ToString();
+            }
+            catch{}
+            
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double a = Double.Parse(inputBox.Text);
+                resultBox.Text = m_unitConvert(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), a).ToString();
+            }
+            catch{}
+        }
+
+        private void inputBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double a = Double.Parse(inputBox.Text);
+                resultBox.Text = m_unitConvert(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), a).ToString();
+            }
+            catch{}
         }
     }
 }

@@ -34,7 +34,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btn_calc = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.resultBox = new System.Windows.Forms.TextBox();
             this.btn_close = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(100, 20);
             this.inputBox.TabIndex = 1;
+            this.inputBox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
             // 
             // label2
             // 
@@ -79,6 +79,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -102,16 +103,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 5;
-            // 
-            // btn_calc
-            // 
-            this.btn_calc.Location = new System.Drawing.Point(121, 144);
-            this.btn_calc.Name = "btn_calc";
-            this.btn_calc.Size = new System.Drawing.Size(75, 23);
-            this.btn_calc.TabIndex = 6;
-            this.btn_calc.Text = "Calculate";
-            this.btn_calc.UseVisualStyleBackColor = true;
-            this.btn_calc.Click += new System.EventHandler(this.btn_calc_Click);
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -158,7 +150,6 @@
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_calc);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
@@ -180,7 +171,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button btn_calc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox resultBox;
         private System.Windows.Forms.Button btn_close;
